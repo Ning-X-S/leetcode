@@ -1,3 +1,5 @@
+// https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words/
+
 /* eslint-disable no-extend-native */
 /**
  * @param {string} s
@@ -127,4 +129,4 @@ function permutationMe (arr) {
   return result
 }
 
-// console.log(permutationMe([1, 2, 3, 4]))
+console.log(permutationMe(['a', 'b', 'c', 'd']))

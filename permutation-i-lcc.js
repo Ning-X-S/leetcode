@@ -1,13 +1,19 @@
+// https://leetcode-cn.com/problems/permutations/
 /* eslint-disable no-extend-native */
-// 无重复字符串的排列组合。编写一种方法，计算某字符串的所有排列组合，字符串每个字符均不相同。
+// 给定一个 没有重复 数字的序列，返回其所有可能的全排列。
 
-// 示例1:
-//  输入：S = "qwe"
-//  输出：["qwe", "qew", "wqe", "weq", "ewq", "eqw"]
+// 示例:
 
-// 示例2:
-//  输入：S = "ab"
-//  输出：["ab", "ba"]
+// 输入: [1,2,3]
+// 输出:
+// [
+//   [1,2,3],
+//   [1,3,2],
+//   [2,1,3],
+//   [2,3,1],
+//   [3,1,2],
+//   [3,2,1]
+// ]
 
 // https://stackoverflow.com/questions/37579994/generate-permutations-of-javascript-array
 // eslint-disable-next-line no-extend-native
@@ -87,3 +93,22 @@ function permute (nums) {
   return list
 }
 // console.log(permute([1, 2, 3, 4]))
+
+function test (arr) {
+  const result = []
+  function a (temp) {
+    if (temp.length === arr.length) result.push(temp)
+    for (let i = 0; i < arr.length; i++) {
+      if (temp.includes(arr[i])) continue
+      a(temp.concat(arr[i]))
+    }
+  }
+  a([])
+  return result
+}
+
+console.log(test(['a', 'b', 'c', 'd']))
+
+// 有权访问函数体内局部变量的函数，称为闭包，闭包利用了作用域的机制，来达到外部作用域可访问内部作用域的目的
+// 有权访问函数体内局部变量的函数，称为闭包。闭包利用了作用域的机制，来达到外部作用域可访问内部作用域的目的。
+// 闭包就是有权访问函数体内局部变量的函数，它利用了作用域的机制，来达到外部作用域可访问局部作用域的目的。

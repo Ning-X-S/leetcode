@@ -11,5 +11,7 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
+    'no-new-object': 0,
+    'no-proto': 0
   }
 }

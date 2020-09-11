@@ -1,0 +1,3 @@
+[2020-09-02T18:41:07.966] [INFO] default - Cheese is 啊啊啊啊啊啊啊啊啊啊啊啊Comté.
+[2020-09-02T18:41:07.971] [ERROR] default - Cheese is too ripe!
+[2020-09-02T18:41:07.971] [FATAL] default - Cheese was breeding ground for listeria.

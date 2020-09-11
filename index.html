@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+  </head>
+  <body>
+    <div class="name">
+      12313
+    </div>
+    <ul id="test">
+      <li>click me</li>
+      <li>click me</li>
+      <li>click me</li>
+      <li>click me</li>
+     </ul>
+    <p>
+      input1=><input type="text" id="input1">
+    </p>
+    <p>
+      input2=>
+      <input type="text" id="input2">
+    </p>
+    <div>
+        我每次比input1的值加1=>
+        <span id="span"></span>
+    </div>
+     <script>
+        // var elements=document.getElementsByTagName('li');
+        // var length=elements.length;
+        // for (let i=0;i<length;i++) {
+        //   elements[i].onclick=function(){
+        //       alert(i);
+        //   }
+        // }
+        var nodeList = document.getElementsByTagName('li') ,
+        arrNodes = Array.prototype.slice.call(nodeList) ,
+        nodeUls = document.getElementsByTagName('ul') ;
+        console.log(nodeList)
+        console.log(arrNodes)
+        nodeUls[0].addEventListener("click",function(event){
+            var event = event || window.event;
+            var target = event.target || event.srcElement;
+            alert(arrNodes.indexOf(target))
+        },false);
+        // var b = document.getElementById('test')
+        // b.onclick=function(e){
+        //   console.log(e)
+        // }
+     </script>
+     <script src="./define.js"></script>
+     <script src="./new.js"></script>
+     <script src="./emit.js"></script>
+  </body>
+</html>
