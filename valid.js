@@ -78,3 +78,4 @@ var searchInsert = function (nums, target) {
 }
 
 console.log(searchInsert([1, 3, 5], 2))
+

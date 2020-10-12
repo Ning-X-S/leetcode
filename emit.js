@@ -45,13 +45,13 @@ function EventEmitter () {
   }
 }
 
-const event = new EventEmitter()
+const events = new EventEmitter()
 
 const handle = (...pyload) => console.log(pyload)
 
-event.on('click', handle)
-event.on('click', () => { console.log(111) })
-event.emit('click', 1, 2, 3)
-event.off('click', handle)
-event.emit('click', 1, 2, 3)
-// console.log(event)
+events.on('click', handle)
+events.on('click', () => { console.log(111) })
+events.emit('click', 1, 2, 3)
+events.off('click', handle)
+events.emit('click', 1, 2, 3)
+// console.log(events)
