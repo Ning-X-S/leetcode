@@ -16,7 +16,6 @@ function EventBus (arr, num) {
   }
 }
 
-
 const events = new EventBus()
 events.on('a', (...args) => console.log(args))
 events.emit('a', 1, 2)
